@@ -14,6 +14,8 @@
 		CE93BBD01EB0DBA5000E0143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE93BBCE1EB0DBA5000E0143 /* LaunchScreen.storyboard */; };
 		CE93BBDB1EB0DBA5000E0143 /* OLOLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93BBDA1EB0DBA5000E0143 /* OLOLTests.swift */; };
 		CE93BBE61EB0DBA5000E0143 /* OLOLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93BBE51EB0DBA5000E0143 /* OLOLUITests.swift */; };
+		CE93BBF51EB0DE1E000E0143 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93BBF31EB0DE1E000E0143 /* TestTableViewCell.swift */; };
+		CE93BBF61EB0DE1E000E0143 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93BBF41EB0DE1E000E0143 /* TestTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		CE93BBE11EB0DBA5000E0143 /* OLOLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OLOLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE93BBE51EB0DBA5000E0143 /* OLOLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLOLUITests.swift; sourceTree = "<group>"; };
 		CE93BBE71EB0DBA5000E0143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE93BBF31EB0DE1E000E0143 /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		CE93BBF41EB0DE1E000E0143 /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				CE93BBC51EB0DBA4000E0143 /* AppDelegate.swift */,
 				CE93BBC71EB0DBA5000E0143 /* ViewController.swift */,
+				CE93BBF31EB0DE1E000E0143 /* TestTableViewCell.swift */,
+				CE93BBF41EB0DE1E000E0143 /* TestTableViewCell.xib */,
 				CE93BBC91EB0DBA5000E0143 /* Main.storyboard */,
 				CE93BBCC1EB0DBA5000E0143 /* Assets.xcassets */,
 				CE93BBCE1EB0DBA5000E0143 /* LaunchScreen.storyboard */,
@@ -236,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE93BBD01EB0DBA5000E0143 /* LaunchScreen.storyboard in Resources */,
+				CE93BBF61EB0DE1E000E0143 /* TestTableViewCell.xib in Resources */,
 				CE93BBCD1EB0DBA5000E0143 /* Assets.xcassets in Resources */,
 				CE93BBCB1EB0DBA5000E0143 /* Main.storyboard in Resources */,
 			);
@@ -264,6 +271,7 @@
 			files = (
 				CE93BBC81EB0DBA5000E0143 /* ViewController.swift in Sources */,
 				CE93BBC61EB0DBA4000E0143 /* AppDelegate.swift in Sources */,
+				CE93BBF51EB0DE1E000E0143 /* TestTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,8 +425,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E8ZNHLBSVP;
 				INFOPLIST_FILE = OLOL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.litech.OLOL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.OLOL.kimu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -430,8 +439,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E8ZNHLBSVP;
 				INFOPLIST_FILE = OLOL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.litech.OLOL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.OLOL.kimu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
