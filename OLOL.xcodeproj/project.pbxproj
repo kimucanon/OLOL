@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0BCF741EB5B14D0047E6D2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BCF731EB5B14D0047E6D2 /* TestViewController.swift */; };
 		CE93BBC61EB0DBA4000E0143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93BBC51EB0DBA4000E0143 /* AppDelegate.swift */; };
 		CE93BBC81EB0DBA5000E0143 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93BBC71EB0DBA5000E0143 /* ViewController.swift */; };
 		CE93BBCB1EB0DBA5000E0143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE93BBC91EB0DBA5000E0143 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0BCF731EB5B14D0047E6D2 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		CE93BBC21EB0DBA4000E0143 /* OLOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OLOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE93BBC51EB0DBA4000E0143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE93BBC71EB0DBA5000E0143 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				CE93BBF31EB0DE1E000E0143 /* TestTableViewCell.swift */,
 				CE93BBF41EB0DE1E000E0143 /* TestTableViewCell.xib */,
 				CE93BBC91EB0DBA5000E0143 /* Main.storyboard */,
+				CE0BCF731EB5B14D0047E6D2 /* TestViewController.swift */,
 				CE93BBCC1EB0DBA5000E0143 /* Assets.xcassets */,
 				CE93BBCE1EB0DBA5000E0143 /* LaunchScreen.storyboard */,
 				CE93BBD11EB0DBA5000E0143 /* Info.plist */,
@@ -271,6 +274,7 @@
 			files = (
 				CE93BBC81EB0DBA5000E0143 /* ViewController.swift in Sources */,
 				CE93BBC61EB0DBA4000E0143 /* AppDelegate.swift in Sources */,
+				CE0BCF741EB5B14D0047E6D2 /* TestViewController.swift in Sources */,
 				CE93BBF51EB0DE1E000E0143 /* TestTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +528,7 @@
 				CE93BBEC1EB0DBA5000E0143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE93BBED1EB0DBA5000E0143 /* Build configuration list for PBXNativeTarget "OLOLTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +537,7 @@
 				CE93BBEF1EB0DBA5000E0143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE93BBF01EB0DBA5000E0143 /* Build configuration list for PBXNativeTarget "OLOLUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +546,7 @@
 				CE93BBF21EB0DBA5000E0143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

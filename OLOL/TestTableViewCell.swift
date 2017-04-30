@@ -17,6 +17,11 @@ protocol TestDelegate {
 class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var testTextField: UITextField!
+   
+    @IBOutlet weak var addButton: UIButton!
+
+    @IBOutlet weak var plusButton: UILabel!
+  
     
     var delegate:TestDelegate! = nil
     
@@ -26,7 +31,7 @@ class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
         // Initialization code
         
         //テキストフィールドのデリゲート先を自分に設定する。
-        testTextField.delegate = self as UITextFieldDelegate
+    testTextField.delegate = self    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
