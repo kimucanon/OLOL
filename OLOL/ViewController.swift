@@ -1,7 +1,6 @@
 //
 //  ViewController.swift
-//  OLOL
-//
+//  OLOL//
 //  Created by User on 2017/04/26.
 //  Copyright © 2017年 Kanon Kimura. All rights reserved.
 //
@@ -18,7 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     //表示データ
-    var dataList = ["","","","","","","",""]
+    var dataList : [String] = []
     
    //データを返すメソッド（スクロールなどでページを更新する必要が出るたびに呼び出される）
     func tableView(_ tableView:UITableView, cellForRowAt indexPath:IndexPath) -> UITableViewCell {
@@ -26,12 +25,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        cell.textLabel?.text = dataList[indexPath.row]
 //        cell.plusButton.isHidden = true
         
+        //一番下のセルにplusボタンを表示
         if indexPath.row == dataList.count {
             cell.plusButton.isHidden = false
-        }else{
+        } else {
             cell.textLabel?.text = dataList[indexPath.row]
             cell.plusButton.isHidden = true
-        
         }
         
         

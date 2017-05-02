@@ -31,7 +31,7 @@ class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
         // Initialization code
         
         //テキストフィールドのデリゲート先を自分に設定する。
-    testTextField.delegate = self    
+        testTextField.delegate = self    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
