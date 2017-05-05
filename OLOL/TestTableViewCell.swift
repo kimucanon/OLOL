@@ -21,11 +21,9 @@ class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var addButton: UIButton!
 
     @IBOutlet weak var plusButton: UILabel!
-  
     
     var delegate:TestDelegate! = nil
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -49,10 +47,10 @@ class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     
-    //デリゲートメソッド
-    //func textFieldDidEndEditing(_ textField: UITextField) {
-        //テキストフィールドから受けた通知をデリゲート先に流す。
-        //self.delegate.textFieldDidEndEditing(cell: self, value:textField.text!)
-   // }
+//    //デリゲートメソッド
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        //テキストフィールドから受けた通知をデリゲート先に流す。
+//        self.delegate.textFieldDidEndEditing(cell: self, value:self.testTextField.text!)
+//    }
     
 }
