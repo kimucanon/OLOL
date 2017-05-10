@@ -1,19 +1,17 @@
 //
-//  ListTableViewController.swift
+//  FinishListTableViewController.swift
 //  OLOL
 //
-//  Created by User on 2017/05/03.
+//  Created by User on 2017/05/11.
 //  Copyright © 2017年 Kanon Kimura. All rights reserved.
 //
 
 import UIKit
 
-class ListTableViewController: UITableViewController {
+class FinishListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,18 +19,13 @@ class ListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
-    
-    
 
-    @IBAction func backToPink(segue: UIStoryboardSegue) {
-    }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toFinshListTableViewController",sender: nil)
+        self.performSegue(withIdentifier: "toTest2ViewController",sender: nil)
     }
-
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,8 +42,6 @@ class ListTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-    
-    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

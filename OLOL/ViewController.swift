@@ -55,6 +55,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
+    
+    
     //削除ボタン
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -87,11 +89,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(dataList)
     }
     
+       
+    
+    
+    
+
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+  
     
 }
 

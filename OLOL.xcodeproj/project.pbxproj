@@ -11,6 +11,11 @@
 		CE0BCF871EB96FB10047E6D2 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BCF851EB96FB10047E6D2 /* ListTableViewCell.swift */; };
 		CE0BCF881EB96FB10047E6D2 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0BCF861EB96FB10047E6D2 /* ListTableViewCell.xib */; };
 		CE0BCF8C1EB972C70047E6D2 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BCF8B1EB972C70047E6D2 /* ListTableViewController.swift */; };
+		CE252C161EC34F3F0043A21B /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE252C151EC34F3F0043A21B /* TitleViewController.swift */; };
+		CE252C191EC360200043A21B /* FinishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE252C171EC360200043A21B /* FinishListTableViewCell.swift */; };
+		CE252C1A1EC360200043A21B /* FinishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE252C181EC360200043A21B /* FinishListTableViewCell.xib */; };
+		CE252C1C1EC3629B0043A21B /* FinishListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE252C1B1EC3629B0043A21B /* FinishListTableViewController.swift */; };
+		CE252C1E1EC36A630043A21B /* Test2 ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE252C1D1EC36A630043A21B /* Test2 ViewController.swift */; };
 		CE93BBC61EB0DBA4000E0143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93BBC51EB0DBA4000E0143 /* AppDelegate.swift */; };
 		CE93BBC81EB0DBA5000E0143 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93BBC71EB0DBA5000E0143 /* ViewController.swift */; };
 		CE93BBCB1EB0DBA5000E0143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE93BBC91EB0DBA5000E0143 /* Main.storyboard */; };
@@ -44,6 +49,11 @@
 		CE0BCF851EB96FB10047E6D2 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		CE0BCF861EB96FB10047E6D2 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		CE0BCF8B1EB972C70047E6D2 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		CE252C151EC34F3F0043A21B /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		CE252C171EC360200043A21B /* FinishListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishListTableViewCell.swift; sourceTree = "<group>"; };
+		CE252C181EC360200043A21B /* FinishListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinishListTableViewCell.xib; sourceTree = "<group>"; };
+		CE252C1B1EC3629B0043A21B /* FinishListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishListTableViewController.swift; sourceTree = "<group>"; };
+		CE252C1D1EC36A630043A21B /* Test2 ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Test2 ViewController.swift"; sourceTree = "<group>"; };
 		CE93BBC21EB0DBA4000E0143 /* OLOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OLOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE93BBC51EB0DBA4000E0143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE93BBC71EB0DBA5000E0143 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +124,11 @@
 				CE93BBF31EB0DE1E000E0143 /* TestTableViewCell.swift */,
 				CE93BBF41EB0DE1E000E0143 /* TestTableViewCell.xib */,
 				CE93BBC91EB0DBA5000E0143 /* Main.storyboard */,
+				CE252C1D1EC36A630043A21B /* Test2 ViewController.swift */,
+				CE252C1B1EC3629B0043A21B /* FinishListTableViewController.swift */,
+				CE252C171EC360200043A21B /* FinishListTableViewCell.swift */,
+				CE252C181EC360200043A21B /* FinishListTableViewCell.xib */,
+				CE252C151EC34F3F0043A21B /* TitleViewController.swift */,
 				CE0BCF851EB96FB10047E6D2 /* ListTableViewCell.swift */,
 				CE0BCF861EB96FB10047E6D2 /* ListTableViewCell.xib */,
 				CE0BCF731EB5B14D0047E6D2 /* TestViewController.swift */,
@@ -253,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE252C1A1EC360200043A21B /* FinishListTableViewCell.xib in Resources */,
 				CE0BCF881EB96FB10047E6D2 /* ListTableViewCell.xib in Resources */,
 				CE93BBD01EB0DBA5000E0143 /* LaunchScreen.storyboard in Resources */,
 				CE93BBF61EB0DE1E000E0143 /* TestTableViewCell.xib in Resources */,
@@ -282,11 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE252C1C1EC3629B0043A21B /* FinishListTableViewController.swift in Sources */,
+				CE252C191EC360200043A21B /* FinishListTableViewCell.swift in Sources */,
 				CE93BBC81EB0DBA5000E0143 /* ViewController.swift in Sources */,
 				CE93BBC61EB0DBA4000E0143 /* AppDelegate.swift in Sources */,
 				CE0BCF741EB5B14D0047E6D2 /* TestViewController.swift in Sources */,
+				CE252C161EC34F3F0043A21B /* TitleViewController.swift in Sources */,
 				CE0BCF8C1EB972C70047E6D2 /* ListTableViewController.swift in Sources */,
 				CE93BBF51EB0DE1E000E0143 /* TestTableViewCell.swift in Sources */,
+				CE252C1E1EC36A630043A21B /* Test2 ViewController.swift in Sources */,
 				CE0BCF871EB96FB10047E6D2 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

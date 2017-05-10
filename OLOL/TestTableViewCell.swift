@@ -38,15 +38,35 @@ class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
         // Configure the view for the selected state
     }
     
+  
+    
+    
+    
+    
     //デリゲートメソッド
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         //キーボードを閉じる。
         textField.resignFirstResponder()
+        
+//        TestTableViewCell.beginUpdates() // アニメーション開始。
+//        // テーブルの最終行を、IndexPathとして取得。
+//        let lastRowIndex = tableView.numberOfRows(inSection: 0)
+//        let indexPath = IndexPath(row: lastRowIndex, section: 0)
+//        // 行を最終行の次に挿入。
+//        tableView.insertRows(at: [indexPath], with: .automatic)
+//        // 元データにも挿入。
+//        tableData.insert("", at: lastRowIndex)
+//        tableView.endUpdates() // アニメーション終了。
+//        // 新しい行のテキストフィールドを、テキスト入力状態にする。
+//        if let cell = tableView.cellForRow(at: indexPath) as? CustomCell {
+//            cell.textField.becomeFirstResponder()
+//        }
+        
         return true
     }
     
-    
+        
 //    //デリゲートメソッド
 //    func textFieldDidEndEditing(_ textField: UITextField) {
 //        //テキストフィールドから受けた通知をデリゲート先に流す。
