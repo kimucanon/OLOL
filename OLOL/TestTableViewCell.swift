@@ -9,8 +9,8 @@
 import UIKit
 
 //デリゲート先に適用してもらうプロトコル
-protocol TestDelegate {
-    func textFieldDidEndEditing(cell:TestTableViewCell, value:String)
+protocol TestDelegate {///Users/user/LiT_9期_Leaders/OLOL/OLOL/TestTableViewCell.swift
+    func addCell(cell:TestTableViewCell, value:String)
 }
 
 
@@ -21,6 +21,8 @@ class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var addButton: UIButton!
 
     @IBOutlet weak var plusButton: UILabel!
+    
+    
     
     var delegate:TestDelegate! = nil
     
@@ -49,7 +51,9 @@ class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
         //キーボードを閉じる。
         textField.resignFirstResponder()
         
-//        TestTableViewCell.beginUpdates() // アニメーション開始。
+        // Update Table Data
+    
+//        testTableView.beginUpdates() // アニメーション開始。
 //        // テーブルの最終行を、IndexPathとして取得。
 //        let lastRowIndex = tableView.numberOfRows(inSection: 0)
 //        let indexPath = IndexPath(row: lastRowIndex, section: 0)
@@ -62,15 +66,27 @@ class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
 //        if let cell = tableView.cellForRow(at: indexPath) as? CustomCell {
 //            cell.textField.becomeFirstResponder()
 //        }
+
+        
+        
+        
+//        //この処理はViewController内に書きたい！！ → delegateを使えばできる！
+//        textField.beginUpdates()
+//        TestTableViewCell.insertRowsAtIndexPaths([
+//            NSIndexPath(forRow: dataList.count-1, inSection: 0)
+//            ], withRowAnimation: .Automatic)
+//        TestTableViewCell.endUpdates()
+//
+        
         
         return true
     }
     
-        
-//    //デリゲートメソッド
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        //テキストフィールドから受けた通知をデリゲート先に流す。
-//        self.delegate.textFieldDidEndEditing(cell: self, value:self.testTextField.text!)
-//    }
+    
+    //デリゲートメソッド
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //テキストフィールドから受けた通知をデリゲート先に流す。
+        self.delegate.addCell(cell: self, value:self.testTextField.text!)
+    }
     
 }

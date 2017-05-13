@@ -7,13 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, TestDelegate {
     
     @IBOutlet weak var testTableView: UITableView!
     
+    
+       
     @IBAction func unwindToTop(segue: UIStoryboardSegue){
         
     }
+    
     
     
     //表示データ
@@ -24,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for:indexPath) as! TestTableViewCell
         //        cell.textLabel?.text = dataList[indexPath.row]
         //        cell.plusButton.isHidden = true
+        cell.delegate = self
         
         //一番下のセルにplusボタンを表示
         if indexPath.row == dataList.count {
@@ -79,17 +83,58 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         testTableView.register(testXib, forCellReuseIdentifier:"TestCell")
     }
     
-    //デリゲートメソッド
-    private func textFieldDidEndEditing(cell: TestTableViewCell, value:String) {
-        //変更されたセルのインデックスを取得する。
-        let index = testTableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to:testTableView))
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        //データを変更する。
-        dataList[index!.row] = value
-        print(dataList)
+        return true
+    
     }
     
-       
+    
+    func addCell(cell: TestTableViewCell, value: String) {
+        //配列(dataList)に入力した単語（value）を追加
+        dataList.append(value)
+        
+        //testTableViewを更新(reload)
+        testTableView.reloadData()
+        
+    }
+    
+    
+
+//    //デリゲートメソッド
+//    private func textFieldDidEndEditing(cell: TestTableViewCell, value:String) {
+//        //変更されたセルのインデックスを取得する。
+//        let index = testTableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to:testTableView))
+//        
+//        //データを変更する。
+//        dataList[index!.row] = value
+//        print(dataList)
+//    }
+//    
+//    
+//    func textFieldDidEndEditing(_ textField:UITextField){
+//
+//    
+//    }
+    
+//    //デリゲートメソッド
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+//    {
+//        //キーボードを閉じる。
+//        textField.resignFirstResponder()
+//        
+//        // Update Table Data
+//        testTableView.beginUpdates()
+////        testTableView.insertRowsAtIndexPaths([
+////            NSIndexPath(forRow: dataList.count-1, inSection: 0)
+////            ], withRowAnimation: .Automatic)
+//        testTableView.endUpdates()
+//        
+//        
+//        
+//        return true
+//    }
     
     
     
