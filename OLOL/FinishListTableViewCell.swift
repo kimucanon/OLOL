@@ -9,6 +9,9 @@
 import UIKit
 
 class FinishListTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var WordLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

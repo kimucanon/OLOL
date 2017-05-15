@@ -9,7 +9,16 @@
 import UIKit
 
 class FinishListTableViewController: UITableViewController {
-
+    
+//    @IBOutlet weak var wordtableviewcell: UITableViewCell!
+    
+    
+    
+    var wordArray = [String]()
+    
+    let saveData = UserDefaults.standard
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +28,24 @@ class FinishListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        wordArray = saveData.array(forKey: "WORD") as![String];()
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+        -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath)
+            as! FinishListTableViewCell
+            
+            let nowIndexPathDictionary = wordArray[indexPath.row]
+            
+            cell.WordLabel.text = nowIndexPathDictionary
+            
+            return cell
+        }
 
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
@@ -35,12 +62,12 @@ class FinishListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return wordArray.count
     }
 
     /*

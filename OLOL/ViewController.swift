@@ -17,6 +17,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    var wordArray = [String]()
+    
+    let saveData = UserDefaults.standard
+    
+    
+//    @IBAction func tourokuButton() {
+//        let wordDictionary = [testTextField.text!]
+//    }
+    
     
     
     //表示データ
@@ -81,6 +90,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //自作セルをテーブルビューに登録する。
         let testXib = UINib(nibName:"TestTableViewCell", bundle:nil)
         testTableView.register(testXib, forCellReuseIdentifier:"TestCell")
+        
+        if saveData.array(forKey: "WORD") != nil {
+            wordArray = saveData.array(forKey: "WORD") as! [String];()
+        }
     }
     
     
@@ -94,11 +107,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func addCell(cell: TestTableViewCell, value: String) {
         //配列(dataList)に入力した単語（value）を追加
         dataList.append(value)
+        saveData.set(dataList, forKey: "WORD")
         
         //testTableViewを更新(reload)
         testTableView.reloadData()
         
     }
+    
+    
     
     
 

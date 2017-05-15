@@ -53,30 +53,6 @@ class TestTableViewCell: UITableViewCell, UITextFieldDelegate {
         
         // Update Table Data
     
-//        testTableView.beginUpdates() // アニメーション開始。
-//        // テーブルの最終行を、IndexPathとして取得。
-//        let lastRowIndex = tableView.numberOfRows(inSection: 0)
-//        let indexPath = IndexPath(row: lastRowIndex, section: 0)
-//        // 行を最終行の次に挿入。
-//        tableView.insertRows(at: [indexPath], with: .automatic)
-//        // 元データにも挿入。
-//        tableData.insert("", at: lastRowIndex)
-//        tableView.endUpdates() // アニメーション終了。
-//        // 新しい行のテキストフィールドを、テキスト入力状態にする。
-//        if let cell = tableView.cellForRow(at: indexPath) as? CustomCell {
-//            cell.textField.becomeFirstResponder()
-//        }
-
-        
-        
-        
-//        //この処理はViewController内に書きたい！！ → delegateを使えばできる！
-//        textField.beginUpdates()
-//        TestTableViewCell.insertRowsAtIndexPaths([
-//            NSIndexPath(forRow: dataList.count-1, inSection: 0)
-//            ], withRowAnimation: .Automatic)
-//        TestTableViewCell.endUpdates()
-//
         
         
         return true

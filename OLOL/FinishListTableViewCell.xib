@@ -27,6 +27,9 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="WordLabel" destination="FLM-d2-cmn" id="4OC-cg-ffR"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

@@ -28,8 +28,8 @@ class ListTableViewController: UITableViewController {
     @IBAction func backToPink(segue: UIStoryboardSegue) {
     }
     
-    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toFinshListTableViewController",sender: nil)
+    override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+            performSegue(withIdentifier: "toFinishListTableViewController",sender: nil)
     }
 
     
