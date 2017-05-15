@@ -9,6 +9,9 @@
 import UIKit
 
 class ListTableViewController: UITableViewController {
+    
+    @IBOutlet var ListTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,11 @@ class ListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        tableView.dataSource = self
+        
+        tableView.delegate = self
+        
     }
     
     
@@ -28,8 +36,8 @@ class ListTableViewController: UITableViewController {
     @IBAction func backToPink(segue: UIStoryboardSegue) {
     }
     
-    override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "toFinishListTableViewController",sender: nil)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            performSegue(withIdentifier: "say",sender: nil)
     }
 
     
@@ -51,16 +59,16 @@ class ListTableViewController: UITableViewController {
     }
     
     
+    
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListTableViewCell
 
-        // Configure the cell...
-
+        
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

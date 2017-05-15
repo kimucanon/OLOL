@@ -39,7 +39,7 @@
                 <outlet property="plusButton" destination="K3r-8b-hPn" id="9yv-li-qip"/>
                 <outlet property="testTextField" destination="794-Dg-XPm" id="xe5-yL-dYs"/>
             </connections>
-            <point key="canvasLocation" x="98" y="67"/>
+            <point key="canvasLocation" x="249" y="-25"/>
         </tableViewCell>
     </objects>
 </document>
