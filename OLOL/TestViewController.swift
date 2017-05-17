@@ -14,6 +14,8 @@ class TestViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.view.backgroundColor = #colorLiteral(red: 0.3071770208, green: 0.6086728457, blue: 0.7646534974, alpha: 1)
     }
     
     override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {

@@ -9,11 +9,14 @@
 import UIKit
 
 class Test2_ViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.view.backgroundColor = #colorLiteral(red: 0.3071770208, green: 0.6086728457, blue: 0.7646534974, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {

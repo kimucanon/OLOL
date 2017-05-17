@@ -10,6 +10,11 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
+    var wordArray = [String]()
+    
+    let saveData = UserDefaults.standard
+
+    
     @IBOutlet var ListTableView: UITableView!
     
 
@@ -28,6 +33,8 @@ class ListTableViewController: UITableViewController {
         
         tableView.delegate = self
         
+        
+        
     }
     
     
@@ -41,6 +48,11 @@ class ListTableViewController: UITableViewController {
     }
 
     
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        performSegue(withIdentifier: "say", sender: self)
+//    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,12 +62,12 @@ class ListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 10
     }
     
     
