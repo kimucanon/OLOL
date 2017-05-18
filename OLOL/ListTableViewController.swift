@@ -10,14 +10,13 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
+    @IBOutlet var ListTableView: UITableView!
+    
     var wordArray = [String]()
     
     let saveData = UserDefaults.standard
 
     
-    @IBOutlet var ListTableView: UITableView!
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +42,10 @@ class ListTableViewController: UITableViewController {
     @IBAction func backToPink(segue: UIStoryboardSegue) {
     }
     
+    @IBAction func back(segue: UIStoryboardSegue) {
+    }
+
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             performSegue(withIdentifier: "say",sender: nil)
     }
@@ -67,7 +70,7 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return 100
     }
     
     

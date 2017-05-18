@@ -19,8 +19,12 @@ class FinishListTableViewController: UITableViewController {
     let saveData = UserDefaults.standard
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        tableView.register(UINib(nibName: "FinishListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell2")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,7 +35,7 @@ class FinishListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
-        wordArray = saveData.array(forKey: "WORD") as![String];()
+//        wordArray = saveData.array(forKey: "WORD") as![String];()
         
     }
     
@@ -70,7 +74,7 @@ class FinishListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return wordArray.count
+        return 10
     }
 
     /*
