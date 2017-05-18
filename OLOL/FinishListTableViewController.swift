@@ -10,7 +10,7 @@ import UIKit
 
 class FinishListTableViewController: UITableViewController {
     
-//    @IBOutlet weak var wordtableviewcell: UITableViewCell!
+    @IBOutlet weak var wordtableviewcell: UITableViewCell!
     
     
     
@@ -31,6 +31,10 @@ class FinishListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        tableView.register(UINib(nibName: "FinishListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell2")
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

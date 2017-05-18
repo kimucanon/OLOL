@@ -46,10 +46,13 @@ class ListTableViewController: UITableViewController {
     }
 
     
+        
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "say",sender: nil)
+        performSegue(withIdentifier: "say",sender: nil)
     }
 
+
+    
     
     
 //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

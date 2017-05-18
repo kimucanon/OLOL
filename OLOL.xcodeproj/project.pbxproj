@@ -20,6 +20,7 @@
 		CE75F7C51ECC88D100190569 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE75F7C71ECC88D100190569 /* View.xib */; };
 		CE75F7CB1ECCAC0800190569 /* 大前研一イラスト完成２.png in Resources */ = {isa = PBXBuildFile; fileRef = CE75F7CA1ECCAC0800190569 /* 大前研一イラスト完成２.png */; };
 		CE75F7CD1ECCAF5700190569 /* キラキラ.png in Resources */ = {isa = PBXBuildFile; fileRef = CE75F7CC1ECCAF5700190569 /* キラキラ.png */; };
+		CE75F7D71ECDE8AA00190569 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE75F7D61ECDE8AA00190569 /* icon.png */; };
 		CE93BBC61EB0DBA4000E0143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93BBC51EB0DBA4000E0143 /* AppDelegate.swift */; };
 		CE93BBC81EB0DBA5000E0143 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93BBC71EB0DBA5000E0143 /* ViewController.swift */; };
 		CE93BBCB1EB0DBA5000E0143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE93BBC91EB0DBA5000E0143 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		CE75F7C61ECC88D100190569 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/View.xib; sourceTree = "<group>"; };
 		CE75F7CA1ECCAC0800190569 /* 大前研一イラスト完成２.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大前研一イラスト完成２.png"; sourceTree = "<group>"; };
 		CE75F7CC1ECCAF5700190569 /* キラキラ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "キラキラ.png"; sourceTree = "<group>"; };
+		CE75F7D61ECDE8AA00190569 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		CE93BBC21EB0DBA4000E0143 /* OLOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OLOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE93BBC51EB0DBA4000E0143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE93BBC71EB0DBA5000E0143 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				CE75F7C31ECC76D900190569 /* 大前研一イラスト完成.png */,
 				CE75F7CA1ECCAC0800190569 /* 大前研一イラスト完成２.png */,
 				CE75F7CC1ECCAF5700190569 /* キラキラ.png */,
+				CE75F7D61ECDE8AA00190569 /* icon.png */,
 				CE93BBD11EB0DBA5000E0143 /* Info.plist */,
 			);
 			path = OLOL;
@@ -286,6 +289,7 @@
 				CE0BCF881EB96FB10047E6D2 /* ListTableViewCell.xib in Resources */,
 				CE75F7C41ECC76D900190569 /* 大前研一イラスト完成.png in Resources */,
 				CE93BBD01EB0DBA5000E0143 /* LaunchScreen.storyboard in Resources */,
+				CE75F7D71ECDE8AA00190569 /* icon.png in Resources */,
 				CE75F7CB1ECCAC0800190569 /* 大前研一イラスト完成２.png in Resources */,
 				CE93BBF61EB0DE1E000E0143 /* TestTableViewCell.xib in Resources */,
 				CE93BBCD1EB0DBA5000E0143 /* Assets.xcassets in Resources */,
