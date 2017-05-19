@@ -10,7 +10,10 @@ import UIKit
 
 class ListTableViewCell: UITableViewCell {
     
+
     @IBOutlet weak var listLabel: UILabel!
+    
+    
     
     @IBAction func backToPink(segue: UIStoryboardSegue) {
     }

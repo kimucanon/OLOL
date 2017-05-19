@@ -10,14 +10,25 @@ import UIKit
 
 class TestViewController: UIViewController {
 
+    @IBOutlet weak var meaningTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         self.view.backgroundColor = #colorLiteral(red: 0.3071770208, green: 0.6086728457, blue: 0.7646534974, alpha: 1)
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TestViewController.DismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+       
     }
     
+    func DismissKeyboard(){
+        view.endEditing(true)
+    }
+
     override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
         
     }
@@ -26,6 +37,7 @@ class TestViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

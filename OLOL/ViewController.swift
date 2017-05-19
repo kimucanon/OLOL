@@ -7,9 +7,15 @@
 
 import UIKit
 
+var titleItem = [String]()
+
+
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, TestDelegate {
     
     @IBOutlet weak var testTableView: UITableView!
+    
+    @IBOutlet weak var titleTextField: UITextField!
     
     
        
@@ -19,14 +25,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var wordArray = [String]()
     
+    var titleArray : [String] = []
+    
     let saveData = UserDefaults.standard
     
+    let titlesaveData = UserDefaults.standard
     
-//    @IBAction func tourokuButton() {
-//        let wordDictionary = [testTextField.text!]
+    //登録ボタンをクリックした際にUserDefaultsにテキストフィールドの値を保存。テキストフィールドの値をString型の配列titleItemに格納し、NSUserDefaultsにSet
+    @IBAction func tourokuButton(_ sender: Any) {
+        titleItem.append(titleTextField.text!)
+        UserDefaults.standard.set(titleItem, forKey: "titleList")
+    }
+
+//        titlesaveData.set(titleArray, forKey: "TITLE")
 //    }
     
-    
+    //キーボードのreturnを押下すると、キーボードが下がる
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        titleTextField.resignFirstResponder()
+        return true
+    }
+        
     
     //表示データ
     var dataList : [String] = []
@@ -94,16 +113,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         testTableView.register(testXib, forCellReuseIdentifier:"TestCell")
         
         if saveData.array(forKey: "WORD") != nil {
-            wordArray = saveData.array(forKey: "WORD") as! [String];()
+            wordArray = saveData.array(forKey: "WORD") as! [String]
         }
+        
+        if titlesaveData.array(forKey: "TITLE") != nil {
+            titleArray = titlesaveData.array(forKey: "TITLE") as! [String]
+        }
+
     }
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
+        
         return true
     
     }
+    
+    
     
     
     func addCell(cell: TestTableViewCell, value: String) {

@@ -55,6 +55,9 @@
                                 <state key="normal" title="登録">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tourokuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xcq-uE-P1P"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnh-QW-xF9">
                                 <rect key="frame" x="62" y="82" width="250" height="30"/>
@@ -62,12 +65,16 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tourokuButton:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="z4u-zg-HMl"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.30717702079999998" green="0.60867284570000002" blue="0.76465349739999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="testTableView" destination="qOq-Zr-8Ne" id="ZoS-4T-3Km"/>
+                        <outlet property="titleTextField" destination="jnh-QW-xF9" id="yEb-do-Bxd"/>
                         <segue destination="DZN-dt-ugo" kind="presentation" identifier="toTestViewController" id="249-Cl-jdc"/>
                     </connections>
                 </viewController>
@@ -124,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell2" id="Fxc-5M-ceS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell2" id="Fxc-5M-ceS" customClass="FinishListTableViewCell" customModule="OLOL" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fxc-5M-ceS" id="wal-gO-WMl">
@@ -146,7 +153,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="rxy-jJ-rS8" kind="presentation" identifier="toTest2ViewController" id="CEj-y1-XDX"/>
+                        <segue destination="rxy-jJ-rS8" kind="presentation" identifier="happy" id="CEj-y1-XDX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOl-4d-ELc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,12 +188,16 @@
                                 <state key="normal" title="戻る">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="UQp-YW-YfD" kind="unwind" unwindAction="unwindToTop2WithSegue:" id="LOH-NL-tm0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mF6-vy-uHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UQp-YW-YfD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1916" y="-681.40929535232385"/>
         </scene>
@@ -226,6 +237,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="b4W-94-Sto"/>
+                    <connections>
+                        <outlet property="meaningTextView" destination="E8z-LQ-JcB" id="G1m-nf-5Av"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBd-RG-mbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7dT-4a-KQw" userLabel="Exit" sceneMemberID="exit"/>
