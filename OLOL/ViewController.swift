@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    var wordArray = [String]()
+    var wordArray : [String] = []
     
     var titleArray : [String] = []
     
@@ -114,10 +114,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if saveData.array(forKey: "WORD") != nil {
             wordArray = saveData.array(forKey: "WORD") as! [String]
-        }
-        
-        if titlesaveData.array(forKey: "TITLE") != nil {
-            titleArray = titlesaveData.array(forKey: "TITLE") as! [String]
         }
 
     }

@@ -35,9 +35,11 @@ class ListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        tableView.dataSource = self
+        ListTableView.dataSource = self
         
-        tableView.delegate = self
+        ListTableView.delegate = self
+        
+        ListTableView.register(ListTableViewCell.self, forCellReuseIdentifier: NSStringFromClass(ListTableViewCell.self))
         
         //UserDefaultsの値を取得し、titleItemに代入
         if UserDefaults.standard.object(forKey: "titleList") != nil {
@@ -92,24 +94,14 @@ class ListTableViewController: UITableViewController {
 //    }
     
     //Tableに表示する行数を指定
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titleItem.count
     }
-
     
     
     
     //テーブル（リスト）を下に引っ張って更新
-    override func viewWillAppear(_ animated: Bool) {
-//        super .viewWillAppear(animated)
-//        if titlesavedata.array(forKey: "TITLE") != nil {
-//        titleArray = titlesavedata.array(forKey: "TITLE") as! [String]
-//        
-//        print(titleArray)
-//        
-//    }
-//        tableView.reloadData()
-        
+    override func viewDidAppear(_ animated: Bool) {
         ListTableView.reloadData()
     }
 
@@ -127,9 +119,9 @@ class ListTableViewController: UITableViewController {
     
     
     //各行へ値を表示する関数
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellValue = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")as! ListTableViewCell
-        cellValue .listLabel?.text = titleItem[indexPath.row]
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellValue = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell") as! ListTableViewCell
+        cellValue.listLabel.text = titleItem[indexPath.row]
         return cellValue
     }
         
